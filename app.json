@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "Vakistream",
+    "slug": "vakistream",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "vakistream",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B0F19"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vakistream.app",
+      "infoPlist": {
+        "UIBackgroundModes": ["audio"],
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        },
+        "GADApplicationIdentifier": "ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
+      }
+    },
+    "android": {
+      "package": "com.vakistream.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B0F19"
+      },
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE"
+      ],
+      "usesCleartextTraffic": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-av",
+      "expo-screen-orientation",
+      "expo-file-system",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX",
+          "iosAppId": "ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX",
+          "userTrackingUsageDescription": "Este identificador será usado para apresentar anúncios mais relevantes."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "71d48b8d-caf8-45bb-be5f-e3a853c436ba"
+      },
+      "supabaseUrl": "https://vomcgazmmcefilnmojum.supabase.co",
+      "supabaseAnonKey": "sb_publishable_AmYLQtSgs6uRayd6Qtlrvw_Qba47gPx"
+    }
+  }
+}
